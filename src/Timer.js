@@ -6,7 +6,7 @@
 	var EM = VS.EventManager,
 		SuhTimer = function(config){
 		var cfg = config || {};
-		EM.call(this,['tick','complete','paused','resumed','started']);
+		EM.call(this,['tick','complete','pause','resume','start','stop']);
 		this.tickCount = 0;
 		this.counter = -1;
 		this.maxTicks = cfg.maxTicks || 10;
@@ -19,6 +19,9 @@
 	_tm.start = function(){
 		this.deferred = $Q?$Q.defer():null;
 		this.tickCount = 0;
+		this.trigger('start',{
+			ticks:this.tickCount
+		});
 		this.resume();
 		return $Q?this.deferred.promise:undefined;
 	};
@@ -59,12 +62,16 @@
 			this._clearTimer();
 			this.counter = setInterval(VS.proxy(this.tick,this),this.delay);
 			this.ticking = true;
+			this.trigger('resume',)
 		}
 		return $Q?this.deferred.promise:undefined;
 	};
 	_tm.pause = function(){
 		this._clearTimer();
 		this.ticking = false;
+		this.trigger('pause',{
+			ticks:this.tickCount
+		});
 		return this;
 	};
 	_tm.tick = function(){
@@ -86,6 +93,9 @@
 		this._clearTimer();
 		this.ticking = false;
 		this.counter = -1;
+		this.trigger('stop',{
+			ticks:this.tickCount
+		});
 		this.rejectDeferred();
 	};
 
