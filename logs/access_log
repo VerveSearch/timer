@@ -1,0 +1,6 @@
+127.0.0.1 - - [17/Jul/2015:12:09:32 +0100] "GET / HTTP/1.1" 200 1879 "-" "curl/7.37.1"
+127.0.0.1 - - [17/Jul/2015:12:09:32 +0100] "GET / HTTP/1.1" 200 1879 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36"
+127.0.0.1 - - [17/Jul/2015:12:09:32 +0100] "GET /icons/script.gif HTTP/1.1" 200 242 "http://timer.dev/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36"
+127.0.0.1 - - [17/Jul/2015:12:09:33 +0100] "GET /icons/dir.gif HTTP/1.1" 200 225 "http://timer.dev/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36"
+127.0.0.1 - - [17/Jul/2015:12:09:34 +0100] "GET /icons/forward.gif HTTP/1.1" 200 219 "http://timer.dev/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36"
+127.0.0.1 - - [17/Jul/2015:12:09:34 +0100] "GET /favicon.ico HTTP/1.1" 404 209 "http://timer.dev/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36"
